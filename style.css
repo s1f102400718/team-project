@@ -10,8 +10,37 @@ header {
 }
 
 body {
-	background:#FFF url(../img/share/bg.gif) no-repeat left top;
-	font-family:Verdana, "ＭＳ Ｐゴシック", sans-serif;
-	font-size:80%;
-    
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.slideshow-container {
+    width: 80%;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    position: relative;
+}
+
+.slideshow {
+    display: flex;
+    width: 100%;
+    animation: slideshow 20s linear infinite;
+}
+
+.slideshow img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+@keyframes slideshow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
 }
