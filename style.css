@@ -9,38 +9,45 @@ header {
     padding: 10px 0;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+@charset "utf-8";
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider img {
+    width:100%;/*スライダー内の画像を横幅100%に*/
+    height:auto;
 }
 
-.slideshow-container {
-    width: 80%;
-    overflow: hidden;
-    border: 2px solid #ccc;
-    position: relative;
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+
+.slider .slick-slide {
+    margin:0 10px;/*スライド左右の余白調整*/
 }
 
-.slideshow {
-    display: flex;
-    width: 100%;
-    animation: slideshow 20s linear infinite;
+
+/*========= レイアウトのためのCSS ===============*/
+
+body{
+  background:#eee;
 }
 
-.slideshow img {
-    width: 100%;
-    flex-shrink: 0;
+h2,p {
+    text-align:center;
+    padding:20px;
 }
 
-@keyframes slideshow {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-200%);
-    }
+ul{
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  color: #333;
+}
+
+a:hover,
+a:active{
+  text-decoration: none;
 }
